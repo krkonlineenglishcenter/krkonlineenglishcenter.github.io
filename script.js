@@ -1,6 +1,24 @@
 // Dit au CSS que JavaScript fonctionne (utile pour les petites animations)
 document.documentElement.classList.add("js");
 
+// ===== PLACES RESTANTES : change seulement ce chiffre, puis renvoie ce fichier sur GitHub =====
+const PLACES_RESTANTES = 10;
+
+// Écrit le bon message partout où il y a data-places dans les pages
+let texte;
+if (PLACES_RESTANTES <= 0) {
+  texte = "Complet : liste d'attente";
+} else if (PLACES_RESTANTES === 1) {
+  texte = "Dernière place disponible !";
+} else if (PLACES_RESTANTES <= 5) {
+  texte = "Plus que " + PLACES_RESTANTES + " places !";
+} else {
+  texte = PLACES_RESTANTES + " places disponibles";
+}
+document.querySelectorAll("[data-places]").forEach((el) => {
+  el.textContent = texte;
+});
+
 // Année automatique dans le pied de page (présent sur toutes les pages)
 document.getElementById("year").textContent = new Date().getFullYear();
 

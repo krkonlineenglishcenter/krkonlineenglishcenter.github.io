@@ -9,6 +9,7 @@
   --muted:  #5a6286;   /* texte secondaire */
   --paper:  #f3f5fb;   /* fond des pages (comme le fond du logo) */
   --white:  #ffffff;
+  --tint:   #e8ecf8;   /* bleu très clair : bandeaux doux */
   --line:   #d5dbee;   /* fines lignes */
   --wa:     #1f8f4e;   /* vert WhatsApp */
 
@@ -85,8 +86,8 @@ nav a.active { color: var(--white); font-weight: 600; border-bottom-color: var(-
 section { padding: 56px 0; }
 .soft { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
-.page-head { background: var(--navy); padding: 40px 0 34px; }
-.page-head h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--white); margin: 0; }
+.page-head { background: var(--tint); padding: 40px 0 34px; border-bottom: 1px solid var(--line); }
+.page-head h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--navy); margin: 0; }
 .page-head h1::after { content: ""; display: block; width: 56px; height: 4px; background: var(--red); margin-top: 14px; }
 
 .pillars { display: grid; gap: 18px; margin-top: 26px; }
@@ -103,9 +104,9 @@ section { padding: 56px 0; }
 .msg.me { justify-self: end; background: var(--navy); color: var(--white); border-color: var(--navy); border-right: 4px solid var(--red); }
 .split-home { display: grid; gap: 28px; }
 
-.cta-band { background: var(--navy); color: var(--white); text-align: center; }
-.cta-band h2 { color: var(--white); }
-.cta-band p  { margin-left: auto; margin-right: auto; color: #c9d0f2; }
+.cta-band { background: var(--tint); color: var(--ink); text-align: center; border-top: 1px solid var(--line); }
+.cta-band h2 { color: var(--navy); }
+.cta-band p  { margin-left: auto; margin-right: auto; color: var(--muted); }
 
 /* ============ Cours et horaires ============ */
 .week { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin: 22px 0 14px; max-width: 580px; }
@@ -141,8 +142,8 @@ textarea { resize: vertical; }
 input:focus, select:focus, textarea:focus { border-color: var(--indigo); outline: 3px solid #c7cdf1; outline-offset: 0; }
 form .button { margin-top: 24px; justify-self: start; }
 #form-message { font-weight: 600; color: var(--navy); min-height: 1.5em; }
-.aside-box { background: var(--navy); color: var(--white); padding: 28px; border-top: 4px solid var(--red); align-self: start; }
-.aside-box h3 { color: var(--white); }
+.aside-box { background: var(--white); color: var(--ink); padding: 28px; border: 1px solid var(--line); border-top: 4px solid var(--red); align-self: start; }
+.aside-box h3 { color: var(--navy); }
 
 /* ============ Contact ============ */
 .email-big { font-family: var(--title); font-weight: 700; font-size: clamp(1.2rem, 4.5vw, 1.8rem); margin: 8px 0 20px; word-break: break-all; }
@@ -153,11 +154,18 @@ form .button { margin-top: 24px; justify-self: start; }
 .notice { background: var(--white); border: 1px solid var(--line); border-left: 6px solid var(--red); padding: 24px 26px; max-width: 760px; }
 .notice h3 { margin-bottom: .4em; }
 .notice p { margin: 0; color: var(--muted); }
-.aside-note { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid #3a4486; font-size: .9rem; color: #c9d0f2; }
+.aside-note { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
+
+/* ============ Mentor et soutien (discret) ============ */
+.mentor { max-width: 760px; border-top: 1px solid var(--line); padding-top: 22px; }
+.mentor h3 { font-size: 1rem; margin-bottom: .3em; }
+.mentor p { margin: 0 0 .9em; max-width: 62ch; color: var(--muted); font-size: .95rem; }
+.mentor p:last-child { margin-bottom: 0; font-style: italic; }
 
 /* ============ Pied de page ============ */
 footer { background: var(--navy); color: #aeb7e6; text-align: center; padding: 28px 20px; font-size: .88rem; border-top: 3px solid var(--red); }
 footer p { margin: 0 auto; }
+.credits { margin-top: 12px; font-size: .8rem; line-height: 1.6; color: #8b95cc; }
 
 /* ============ Animations discrètes (ignorées si la personne préfère moins d'animations) ============ */
 @media (prefers-reduced-motion: no-preference) {
