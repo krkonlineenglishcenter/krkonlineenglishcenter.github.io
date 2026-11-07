@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription - KRK Online English Center</title>
+  <link rel="icon" href="logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><img class="brand-logo" src="logo.jpg" alt="" width="52" height="52"><div class="brand-text"><strong>KRK</strong><span>Online English Center</span></div></a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="cours.html">Cours et horaires</a>
+        <a href="apropos.html">À propos</a>
+        <a href="inscription.html" class="active">Inscription</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-head">
+    <div class="container"><h1>Inscription</h1></div>
+  </div>
+
+  <main>
+    <section>
+      <div class="container split">
+
+        <div>
+          <p>Remplissez le formulaire. Nous vous répondons rapidement par email.</p>
+
+          <!-- Lien Formspree du centre (ne pas modifier sauf changement de formulaire) -->
+          <form id="signup" action="https://formspree.io/f/xkjjylyq" method="POST">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+
+            <label for="whatsapp">Numéro WhatsApp (facultatif)</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+229 ..." autocomplete="tel">
+
+            <label for="level">Votre niveau</label>
+            <select id="level" name="level">
+              <option>Débutant</option>
+              <option>Intermédiaire</option>
+              <option>Je ne sais pas</option>
+            </select>
+
+            <label for="goal">Votre objectif en anglais</label>
+            <textarea id="goal" name="goal" rows="3" placeholder="Ex. : parler avec des clients, voyager, étudier à l'étranger, trouver un emploi..."></textarea>
+
+            <button type="submit" class="button">Envoyer mon inscription</button>
+            <p id="form-message" role="status"></p>
+          </form>
+        </div>
+
+        <aside class="aside-box">
+          <h3>Ce qui vous attend</h3>
+          <ul class="ticks">
+            <li>Cours le jeudi et le samedi, 1h45</li>
+            <li>Club de pratique WhatsApp</li>
+            <li>15 000 par mois</li>
+            <li>10 places, début en décembre</li>
+          </ul>
+          <p class="aside-note">Les résultats dépendent de votre volonté et de votre travail régulier.</p>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> KRK Online English Center. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
